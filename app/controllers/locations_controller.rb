@@ -18,25 +18,13 @@ class LocationsController < ApplicationController
     @location = Location.new(location_params)
 
     if @location.save
-      render json: @location, status: :created, location: @location
+      render json: @location, except: [:created_at, :updated_at]
     else
       render json: @location.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /locations/1
-  def update
-    if @location.update(location_params)
-      render json: @location
-    else
-      render json: @location.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /locations/1
-  def destroy
-    @location.destroy
-  end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

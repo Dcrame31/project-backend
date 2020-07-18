@@ -10,7 +10,7 @@ class HikesController < ApplicationController
 
   # GET /hikes/1
   def show
-    render json: hike
+    render json: @hike
   end
 
   # POST /hikes
@@ -18,20 +18,12 @@ class HikesController < ApplicationController
     @hike = Hike.new(hike_params)
 
     if @hike.save
-      render json: @hike, status: :created, location: @hike
+      render json: @hike, except: [:created_at, :updated_at]
     else
       render json: @hike.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /hikes/1
-  def update
-    if @hike.update(hike_params)
-      render json: @hike
-    else
-      render json: @hike.errors, status: :unprocessable_entity
-    end
-  end
 
   # DELETE /hikes/1
   def destroy
