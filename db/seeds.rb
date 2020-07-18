@@ -48,16 +48,16 @@ hikes = [
 
 
 locations = [
-    {county: "Los Angeles"},
-    {county: "San Bernardino"},
-    {county: "Ventura"},
-    {county: "Riverside"},
-    {county: "San Diego"},
-    {county: "Orange"},
-    {county: "Imperial"},
-    {county: "Kern"},
-    {county: "Santa Barbara"},
-    {county: "San Luis Obispo"}
+    {county: "Los Angeles County"},
+    {county: "San Bernardino County"},
+    {county: "Ventura County"},
+    {county: "Riverside County"},
+    {county: "San Diego County"},
+    {county: "Orange County"},
+    {county: "Imperial County"},
+    {county: "Kern County"},
+    {county: "Santa Barbara County"},
+    {county: "San Luis Obispo County"}
 ]
 
 locations.each do |location|
