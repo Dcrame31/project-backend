@@ -3,14 +3,14 @@ class HikesController < ApplicationController
 
   # GET /hikes
   def index
-    @hikes = Hike.all
+    hikes = Hike.all
 
-    render json: @hikes
+    render json: hikes
   end
 
   # GET /hikes/1
   def show
-    render json: @hike
+    render json: hike
   end
 
   # POST /hikes
@@ -46,6 +46,6 @@ class HikesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def hike_params
-      params.require(:hike).permit(:name, :distance, :elevation_gain, :website, :location_id)
+      params.require(:hike).permit(:name, :distance, :difficulty, :elevation_gain, :website, :location_id)
     end
 end

@@ -52,6 +52,12 @@ locations = [
     {county: "San Bernardino"},
     {county: "Ventura"},
     {county: "Riverside"},
+    {county: "San Diego"},
+    {county: "Orange"},
+    {county: "Imperial"},
+    {county: "Kern"},
+    {county: "Santa Barbara"},
+    {county: "San Luis Obispo"}
 ]
 
 locations.each do |location|
