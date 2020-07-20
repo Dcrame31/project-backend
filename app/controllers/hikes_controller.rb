@@ -24,6 +24,14 @@ class HikesController < ApplicationController
     end
   end
 
+  # PATCH/PUT /hikes/1
+  def update
+    if @hike.update(hike_params)
+      render json: @hike
+    else
+      render json: @hike.errors, status: :unprocessable_entity
+    end
+  end
 
   # DELETE /hikes/1
   def destroy
